@@ -61,4 +61,7 @@ public class Operaciones {
        return 5;
     }
 
+    public int ricardo(){
+       return 5;
+    }
 }
