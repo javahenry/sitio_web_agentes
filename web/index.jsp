@@ -47,6 +47,8 @@
             
             }
         %>
-
+        <address>
+            <a href="registro.jsp">Registrar persona</a>
+        </address>
     </body>
 </html>
