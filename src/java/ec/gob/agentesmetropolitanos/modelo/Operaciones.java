@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Operaciones {
 
-    private static int fac ;
+    private static int fac;
     private static int[] lista;
 
     public static int factorial(int num) {
@@ -24,36 +24,41 @@ public class Operaciones {
         }
         return fac;
     }
-    
-    public static void dimensionar(int dim){
-       
+
+    public static void dimensionar(int dim) {
+
         lista = new int[dim];
     }
-    
-    public static void llenarArreglo(){
+
+    public static void llenarArreglo() {
         for (int i = 0; i < lista.length; i++) {
-            lista[i]=(int)(Math.random()*100);            
+            lista[i] = (int) (Math.random() * 100);
         }
     }
-    public static String imprimir(){
+
+    public static String imprimir() {
         return Arrays.toString(lista);
     }
-    
-    public static int maximo(){
+
+    public static int maximo() {
         Arrays.sort(lista);
-        return lista[lista.length-1];
+        return lista[lista.length - 1];
     }
-     public static int minimo(){
+
+    public static int minimo() {
         Arrays.sort(lista);
         return lista[0];
     }
 
     public static String valores() {
-        
-        return "Los elementos de la lista son: "+imprimir()+"<br>"
-                + "El valor Maximo es: "+maximo()+"<br>"
-                + "El minimo es: "+minimo();
-                }
+
+        return "Los elementos de la lista son: " + imprimir() + "<br>"
+                + "El valor Maximo es: " + maximo() + "<br>"
+                + "El minimo es: " + minimo();
+    }
     
-     
+    public int sumaSolis(){
+       return 5;
+    }
+
 }
