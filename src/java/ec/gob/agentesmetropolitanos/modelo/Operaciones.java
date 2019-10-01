@@ -57,7 +57,7 @@ public class Operaciones {
                 + "El minimo es: " + minimo();
     }
     
-    public int sumaSolis(){
+    public int marcoAguas(){
        return 5;
     }
 
