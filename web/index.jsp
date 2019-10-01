@@ -11,10 +11,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Factorial </title>
     </head>
     <body>
-        <h1 style="text-align:center">EJERCICIOS ARITMETICOS</h1>
+        <h1 style="text-align:center">OPERACIONES MATEMATICAS</h1>
         <form method="POST">
             <label>Ingresa un numero</label>
             <input type="number" name="dim" value="" />
@@ -22,21 +22,7 @@
             
             <input type="submit" value="Asignar Valores" name="numero"/>
         </form>
-        <%--
-        Es el numero 5 > 6 = <%= 5>6 %>
-        <br>
-        La suma de 5 + 7 = <%= 5+7 %>
-           <br>
-        Poner en mayusculas agentes: <%= new String("agentes").toUpperCase() %>
-        --%>
-        
-        <%--
-            
-            if(request.getParameter("factorial")!=null){
-            Integer var = Integer.parseInt(request.getParameter("n1"));
-            out.println(Operaciones.factorial(var) );
-            }
-        --%>
+       
       
         <%
             if(request.getParameter("numero")!=null){
