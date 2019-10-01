@@ -18,7 +18,7 @@
         <form method="POST">
             <label>Ingresa un numero</label>
             <input type="number" name="dim" value="" />
-     
+     asdfghjklkjhgfdssdfghj
             
             <input type="submit" value="Asignar Valores" name="numero"/>
         </form>
