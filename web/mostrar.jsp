@@ -19,7 +19,8 @@
                 <tr>
                     <th>CEDULA</th>
                     <th>NOMBRES</th>
-                    <th>APELLIDOS</th>
+                    <th>APELLIDO PATERNO</th>
+                    <th>APELLIDO MATERNO</th>
                     <th>DIRECCION</th>
                     <th>CORREO</th>
 
@@ -31,8 +32,10 @@
                 %>
                 <tr>
                     <td><% out.print(elemento.getCedula()); %> </td>
-                    <td><% out.print(elemento.getPrimerNombre()+ " "+elemento.getSegundoNombre()); %> </td>
+                    <td><% out.print(elemento.getPrimerNombre()); %> </td>
                     <td><% out.print(elemento.getPrimerApellido()); %> </td>
+                    <td><% out.print(elemento.getSegundoApellido()); %> </td>
+                   
                     <td><% out.print(elemento.getDireccion()); %> </td>
                     <td><% out.print(elemento.getEmail()); %> </td>
                     
@@ -42,6 +45,20 @@
             </tbody>
 
         </table>
+            
+            <table bordet="0">
+                <td>
+                    <textarea cols="60" rows="10">
+                        <%
+                    for(Persona persona:Controlador.listado){
+                        out.print(persona.toString());
+                    }
+                    %>
+
+                        
+                    </textarea>
+                </td>
+            </table>
             <address><a href="index.jsp">Volver al formulario</a></address>
 
     </body>

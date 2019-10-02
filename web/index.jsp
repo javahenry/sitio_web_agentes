@@ -4,6 +4,8 @@
     Author     : Santiago
 --%>
 
+<%@page import="ec.gob.agentesdecontrol.controlador.Controlador"%>
+<%@page import="ec.gob.agentesdecontrol.modelo.Persona"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -45,12 +47,48 @@
                 <td></td>
                 <td> <input type="submit" value="GUARDAR DATOS"/></td>
                 <td> <input type="button" value="MOSTRAR DATOS INGRESADOS" onclick="mostrarDatos()" /></td>
+           <td> <input type="button" value="SEPARAR NOMBRES" onclick="separar()" /></td>
+           
             </tr>
             
         </table>
         
         </center>
+        <br>
+        <br>
+        <<table border ="1">
+            <thead>
+                <tr>
+                    <th>CEDULA</th>
+                    <th>NOMBRES</th>
+                    <th>APELLIDO PATERNO</th>
+                    <th>APELLIDO MATERNO</th>
+                    <th>DIRECCION</th>
+                    <th>CORREO</th>
 
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                    for (Persona elemento : Controlador.listado) {
+                %>
+                <tr>
+                    <td><% out.print(elemento.getCedula()); %> </td>
+                    <td><% out.print(elemento.getPrimerNombre()); %> </td>
+                    <td><% out.print(elemento.getPrimerApellido()); %> </td>
+                    <td><% out.print(elemento.getSegundoApellido()); %> </td>
+                   
+                    <td><% out.print(elemento.getDireccion()); %> </td>
+                    <td><% out.print(elemento.getEmail()); %> </td>
+                    
+                </tr>
+                <% }
+                %>
+            </tbody>
+
+        
+        
+        
 
     </form>
         
@@ -58,6 +96,11 @@
         <script type="text/javascript">
             function mostrarDatos(){
                 location.href="mostrar.jsp"
+            }
+        </script>
+        <script type="text/javascript">
+            function separar(){
+               location.href="separar.jsp"
             }
         </script>
         
