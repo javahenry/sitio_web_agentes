@@ -8,6 +8,16 @@ public class Persona {
     private String segundoApellido;
     private String direccion;
     private String email;
+    private int edad;
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+    
 
     public Persona() {
     }
